@@ -46,6 +46,12 @@ TARGET_KERNEL_CONFIG := j2y18lte_defconfig
 TARGET_KERNEL_CLANG_COMPILE := false
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/bootimg.mk
 
+BOARD_MKBOOTIMG_ARGS := --kernel_offset $(BOARD_KERNEL_OFFSET) --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_TAGS_OFFSET)
+BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_TAGS_OFFSET)
+TARGET_PREBUILT_KERNEL := device/samsung/j2y18lte/prebuilt/kernel
+BOARD_PREBUILT_DTBIMAGE_DIR := device/samsung/j2y18lte/prebuilt/dtb.img
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+
 # Filesystem
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
