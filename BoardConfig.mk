@@ -37,7 +37,6 @@ BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom msm_rtb.filter=0x
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
-BOARD_KERNEL_IMAGE_NAME := zImage
 # Custom bootimg.mk covering this - legacy --dt  not --dtb
 # BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 TARGET_KERNEL_ARCH := arm
